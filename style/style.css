@@ -1,15 +1,86 @@
-.social-icons {
-    background-color: #013168;
-    text-align: right;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-footer {
-    background-color: #013168;
+.container {
+    height: 100%;
+}
+
+.iconos {
+    height: 3.5%;
+    background-color: #013068;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.container-fluid {
+    height: 35%;
+}
+
+.descuento {
+    height: 5%;
+    font-family: cursive;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.3em;
+}
+
+p {
+    color: rgb(236, 81, 81);
+}
+
+footer{
+    height: 5%;
+    background-color: #013068;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer {
+    font-size: 0.9em;
+    color: white;
     text-align: center;
-    color: #ffffff;
-    font-family:'Times New Roman', Times, serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.nav-link-1 {
-    color: #013168;
+section {
+    background-color: #013068;
+    height: 53.5%;
+    display: flex;
+    width: auto;
+    height: 430px;
+}
+
+section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: rgb(47, 47, 174);
 }
