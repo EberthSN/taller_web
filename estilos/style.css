@@ -209,9 +209,40 @@ body {
 
 }
 
-.info-complementaria {
+/* .info-complementaria {
     background-color: #191f2b;
-}
+    color: #fff;
+} */
+.info-complementaria {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio equitativamente entre las columnas */
+    padding: 20px 40px; /* Espacio en la parte superior/inferior y derecha/izquierda */
+    background-color: #191f2b; /* Color de fondo */
+    color: white; /* Color del texto */
+    gap: 20px; /* Espacio entre las columnas */
+    font-family: "Abel", sans-serif;
+  }
+  
+  .info-complementaria ul {
+    list-style-type: none; /* Elimina las viñetas de las listas */
+    padding: 0; /* Elimina el padding predeterminado */
+  }
+  
+  .info-complementaria h5 {
+    margin-bottom: 15px; /* Espacio debajo del título */
+  }
+  
+  .info-complementaria a{
+    display: block; /* Hace que los enlaces y elementos de lista se comporten como bloques */
+    margin-bottom: 8px; /* Espacio debajo de cada elemento */
+    text-decoration: none; /* Elimina las subrayas de los enlaces */
+    color: #fff;
+  }
+  
+  .info-complementaria a:hover, .info-complementaria li:hover {
+    text-decoration: underline; /* Subraya los enlaces y elementos de lista al pasar el cursor */
+    color: #7c7575;
+  }
 
 .final {
     min-height: 5vh;
