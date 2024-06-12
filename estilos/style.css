@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #013068;
+    color: white;
+    height: 5vh;
+    padding: 0 10px;
+  }
+  .formato-text, .formato-img {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .formato-text li, .formato-img a {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+  }
+  .formato-text li i, .formato-img a i {
+    font-size: 1.2em; /* Tamaño de los iconos */
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+  .formato-text li i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+  }
+  .formato-img a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em; /* Puedes ajustar el tamaño de los iconos si es necesario */
+  }
+  .formato-img a {
+    color: white;
+    text-decoration: none;
+  }
+  .formato-img a:hover {
+    color: #ddd;
+  }
+  @media (max-width: 768px) {
+    .icons {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+    }
+    .formato-text, .formato-img {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
