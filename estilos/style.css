@@ -1,55 +1,153 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-  }
-  .icons {
+}
+
+.icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #013068;
     color: white;
     height: 5vh;
+    /* Reducir la altura del primer nav */
     padding: 0 10px;
-  }
-  .formato-text, .formato-img {
+    /* Reducir el espacio alrededor de los elementos */
+}
+
+.navbar-nav {
+    height: 10vh;
+    /* Reducir la altura del segundo nav */
+    padding: 5px 10px;
+    /* Reducir el espacio alrededor de los elementos */
+}
+
+.formato-text,
+.formato-img {
     display: flex;
     gap: 15px;
     margin: 0;
     padding: 0;
     list-style: none;
-  }
-  .formato-text li, .formato-img a {
+}
+
+.formato-text li,
+.formato-img a {
     display: flex;
     align-items: center;
     font-size: 0.8em;
-  }
-  .formato-text li i, .formato-img a i {
-    font-size: 1.2em; /* Tamaño de los iconos */
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
 }
-  .formato-text li i {
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
-  }
-  .formato-img a {
+
+.formato-text li i,
+.formato-img a i {
+    font-size: 1.2em;
+    /* Tamaño de los iconos */
+    margin-right: 5px;
+    /* Espacio entre el ícono y el texto */
+}
+
+.formato-text li i {
+    margin-right: 5px;
+    /* Espacio entre el ícono y el texto */
+}
+
+.formato-img a {
     color: white;
     text-decoration: none;
-    font-size: 0.8em; /* Puedes ajustar el tamaño de los iconos si es necesario */
-  }
-  .formato-img a {
+    font-size: 0.8em;
+    /* Puedes ajustar el tamaño de los iconos si es necesario */
+}
+
+.formato-img a {
     color: white;
     text-decoration: none;
-  }
-  .formato-img a:hover {
+}
+
+.formato-img a:hover {
     color: #ddd;
-  }
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .icons {
-      flex-direction: column;
-      height: auto;
-      text-align: center;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
     }
-    .formato-text, .formato-img {
-      flex-direction: column;
-      gap: 5px;
+
+    .formato-text,
+    .formato-img {
+        flex-direction: column;
+        gap: 5px;
     }
-  }
+}
+
+.btn-outline-success {
+    color: #013068 !important;
+    border-color: #013068 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #013068 !important;
+}
+
+.btn-outline-success:hover {
+    background-color: #013068 !important;
+    border-color: #013068 !important;
+    color: white !important;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 36px;
+    /* Aumentar el tamaño de la fuente de Bekins */
+    font-family: 'Arial Black', sans-serif;
+    /* Cambiar el tipo de fuente */
+    letter-spacing: 10px;
+}
+
+.nav-link {
+    font-size: 23px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+}
+
+.nav-item .nav-link {
+    margin-right: 22px;
+    /* Ajusta el valor según sea necesario */
+}
+
+.form-control {
+    font-family: "Abel", sans-serif;
+}
+
+.btn {
+    font-family: "Abel", sans-serif;
+}
+
+.img {
+    background-color: #191f2b;
+    height: 70vh;
+    /* Ocupa el 70% del ancho de la pantalla */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/bekins3.jpg);
+    background-position: right;
+    background-repeat: repeat;
+}
+
+.delante-img {
+    font-size: 30px;
+    color: #fff;
+    font-family: "Gwendolyn", cursive;
+    font-weight: 700;
+    font-style: normal;
+    ;
+}
