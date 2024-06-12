@@ -1,0 +1,13 @@
+.mapaBekins {
+    width: 80vw;
+    /* Establece el ancho al 80% del ancho de la ventana del navegador */
+    height: 80vh;
+    /* Establece la altura al 80% de la altura de la ventana del navegador */
+    margin: auto;
+    /* Centra el mapa horizontalmente */
+    display: block;
+    /* Hace que el mapa se muestre como un bloque */
+    border: none;
+    width: 90%;
+
+}

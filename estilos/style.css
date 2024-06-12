@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Caveat:wght@700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Caveat:wght@700&family=Gwendolyn:wght@400;700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Caveat:wght@700&family=Gwendolyn:wght@400;700&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -111,6 +119,9 @@ body {
     letter-spacing: 10px;
 }
 
+.nombreEmpresa {
+    color: #013068;
+}
 .nav-link {
     font-size: 23px;
     font-family: "Oswald", sans-serif;
@@ -132,22 +143,89 @@ body {
 
 .img {
     background-color: #191f2b;
-    height: 70vh;
+    height: 80vh;
     /* Ocupa el 70% del ancho de la pantalla */
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/bekins3.jpg);
-    background-position: right;
-    background-repeat: repeat;
+    background-image: url(../img/portada.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .delante-img {
     font-size: 30px;
-    color: #fff;
+    color: #000;
     font-family: "Gwendolyn", cursive;
     font-weight: 700;
     font-style: normal;
     ;
+}
+
+.card-img-top {
+    height: 450px;
+    /* Establece una altura fija para las imágenes */
+    width: auto;
+    /* Hace que el ancho sea automático para mantener la proporción original */
+    object-fit: cover;
+    /* Mantiene la proporción de la imagen y la ajusta dentro del contenedor */
+}
+
+.card-informativas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Espacio entre las tarjetas */
+    gap: 5px;
+    /* Espacio entre las tarjetas */
+}
+
+.card {
+    flex: 1 1 18rem;
+    /* Permite que las tarjetas sean flexibles pero tengan un ancho mínimo de 18rem */
+    max-width: 18rem;
+    /* Asegura que las tarjetas no crezcan más de 18rem */
+    margin: 10px 0;
+    /* Añade margen superior e inferior */
+}
+
+.card:first-child {
+    margin-left: 0;
+    /* Elimina el margen izquierdo de la primera tarjeta */
+}
+
+.card:last-child {
+    margin-right: 0;
+    /* Elimina el margen derecho de la última tarjeta */
+}
+
+.card-text {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.info-complementaria {
+    background-color: #191f2b;
+}
+
+.final {
+    min-height: 5vh;
+    background-color: #013068;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-final {
+    font-size: 14px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* Eliminar cualquier margen para asegurar centrado perfecto */
 }
