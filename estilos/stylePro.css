@@ -1,0 +1,92 @@
+/* Ajustes básicos */
+body {
+    background-color: #191f2b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para los elementos de la ventana-productos */
+.ventana-productos {
+    background-color: #013068;
+    padding: 20px;
+    height: 8vh;
+}
+
+.orden-productos {
+    display: flex;
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    gap: 50px;
+    /* Espacio entre los elementos */
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.producto-item {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+
+.producto-item:hover,
+.producto-item:focus {
+    color: #7c7575;
+    text-decoration: none;
+}
+
+/* Contenido adicional */
+.content-div {
+    display: none;
+    margin-top: 20px;
+    background-color: #2c2f36;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+
+
+.content-div a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.content-div a:hover {
+    color: #7c7575;
+}
+
+/* Estilos para la info-complementaria */
+.info-complementaria {
+    background-color: #191f2b;
+    padding: 20px;
+}
+
+.info-complementaria ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-complementaria h5 {
+    color: white;
+}
+
+.info-complementaria a {
+    color: white;
+    text-decoration: none;
+}
+
+.info-complementaria a:hover,
+.info-complementaria a:focus {
+    color: #7c7575;
+    text-decoration: none;
+}
