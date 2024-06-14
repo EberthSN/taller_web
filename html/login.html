@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEKINS-LOGIN</title>
+    <link rel="icon" href="../img/title.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <div class="contenedor__todo">
+
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Iniciar sesión para ingresar</p>
+                    <button id="btn__iniciar-sesion">Iniciar sesión</button>
+                </div>
+
+                <div class="caja__trasera-registrar">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Registrate para iniciar sesión</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
+
+            <div class="contenedor__login-register">
+
+                <form action="" class="formulario__login">
+                    <h2>Iniciar sesión</h2>
+                    <input type="email" minlength="11" placeholder="Correo: ejemplo@gmail.com" id="Iemail" required>
+
+                    <input type="password" placeholder="Contraseña: ejemplo123" id="Icontra" required>
+
+                    <button>Ingresar</button>
+                </form>
+
+                <form action="" class="formulario__register">
+                    <h2>Registrarse</h2>
+                    <input type="text" minlength="3" placeholder="Nombre: Pedro" id="Rnombre" required>
+
+                    <input type="text" minlength="3" placeholder="Apellidos: Picapiedra" id="Rapellido" required>
+
+                    <input type="number" pattern="\d{8}" minlength="8" maxlength="8" placeholder="Número de DNI: 12345678" id="Rdni"
+                        required>
+
+                    <input type="email" minlength="11" placeholder="Correo: ejemplo@gmail.com" id="Remail" required>
+
+                    <input type="number" pattern="\d{9}" maxlength="9" minlength="9" placeholder="Número de celular: 908070605"
+                        id="Rtelefono" required>
+
+                    <input type="text" minlength="8" placeholder="Dirección: Av. ejemplo 1588" id="Rdireccion" required>
+
+                    <input type="password" minlength="5" placeholder="Contraseña: example123" id="Rcontra">
+
+                    <button>Guardar</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../scripts/scriptLogin.js"></script>
+</body>
+
+</html>
