@@ -1,0 +1,44 @@
+
+/* estilos para la pagina web centros de ayuda */
+.pregunta {
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.centro1,centro2 {
+    text-align: center;
+}
+/* estilos para la pagina web promociones */
+
+ .promociones {
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+} 
+
+.p-titulo {
+    font-size: 50px;
+}
+/* estilos para la pagina web opciones de pago */
+.opcionespago {
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+}
+
+.pago-titulo {
+    font-size: 50px;
+}
