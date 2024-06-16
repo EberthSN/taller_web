@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,17 +28,24 @@
       <a href="https://www.instagram.com/" target="_blank">
         <i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.tiktok.com/" target="_blank">
-        <i class="fa-brands fa-tiktok"></i></i></a>
+        <i class="fa-brands fa-tiktok"></i></a>
+        <?php if (isset($_SESSION['user'])): ?>
+                <a href="profile.php" target="_blank">
+                    <i class="fa-solid fa-user"></i></a>
+            <?php else: ?>
+                <a href="login1.php" target="_blank">
+                    <i class="fa-solid fa-user"></i></a>
+            <?php endif; ?>
 
-      <a href="login.html" target="_blank">
-        <i class="fa-solid fa-user"></i>Iniciar sesión</i></a>
+      <a href="carrito.html" target="_blank">
+        <i class="fa-solid fa-cart-shopping"></i></a>
     </ul>
   </nav>
 
   <!-- Menú pricipal -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <h1 class="nombreEmpresa">BEKINS</h1>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -47,7 +55,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+            <a class="nav-link active" href="index.php">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="productos.html">Productos</a>
@@ -133,7 +141,6 @@
     </div>
   </div>
 
-
   <!-- div para información complementaria de la empresa-->
   <div class="info-complementaria">
 
@@ -159,7 +166,7 @@
 
     <ul class="paginas">
       <h5><Strong>Páginas del sistema</Strong></h5>
-      <a href="index.html">Inicio</a>
+      <a href="index.php">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="acercade.html">Sobre nosotros</a>
       <a href="ubicacion.html">Encuentranos en</a>

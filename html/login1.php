@@ -19,23 +19,34 @@
   <!-- Menú para los iconos, celular y correo-->
   <nav class="icons">
     <ul class="formato-text">
-      <li class="correo"><i class="fa-solid fa-envelope"></i> mchavarriaflores@gmail.com</li>
-      <li class="telefono"><i class="fa-solid fa-phone"></i> +51 929 810 227</li>
+      <li class="correo"><i class="fa-solid fa-envelope"></i></i>mchavarriaflores@gmail.com</li>
+      <li class="telefono"><i class="fa-solid fa-phone"></i></i>+51 929 810 227</li>
     </ul>
     <ul class="formato-img">
       <a href="https://www.facebook.com/zapatillasbekins" target="_blank">
         <i class="fa-brands fa-facebook-f"></i></a>
+
       <a href="https://www.instagram.com/" target="_blank">
         <i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.tiktok.com/" target="_blank">
         <i class="fa-brands fa-tiktok"></i></a>
+        <?php if (isset($_SESSION['user'])): ?>
+                <a href="profile.php" target="_blank">
+                    <i class="fa-solid fa-user"></i></a>
+            <?php else: ?>
+                <a href="login1.php" target="_blank">
+                    <i class="fa-solid fa-user"></i></a>
+            <?php endif; ?>
+
+      <a href="carrito.html" target="_blank">
+        <i class="fa-solid fa-cart-shopping"></i></a>
     </ul>
   </nav>
 
-  <!-- Menú principal -->
+  <!-- Menú pricipal -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <h1 class="nombreEmpresa">BEKINS</h1>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -45,10 +56,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link active" href="index.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="productos.html">Productos</a>
+            <a class="nav-link" href="productos.html">Productos</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="acercade.html">Sobre nosotros</a>
@@ -82,14 +93,14 @@
       </div>
 
       <div class="contenedor__login-register">
-        <form action="" class="formulario__login">
+        <form action="login.php" class="formulario__login" method="post">
           <h2>Iniciar sesión</h2>
           <input type="email" minlength="11" placeholder="Correo: ejemplo@gmail.com" id="Iemail" required>
           <input type="password" placeholder="Contraseña: ejemplo123" id="Icontra" required>
           <button>Ingresar</button>
         </form>
 
-        <form action="" class="formulario__register">
+        <form action="register.php" class="formulario__register" method="post">
           <h2>Registrarse</h2>
           <input type="text" minlength="3" placeholder="Nombre: Pedro" id="Rnombre" required>
           <input type="text" minlength="3" placeholder="Apellidos: Picapiedra" id="Rapellido" required>
