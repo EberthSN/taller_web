@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+.sobreBekins {
+    height: 65vh;
+    height: 65%;
+    margin: auto;
+    display: block;
+}
+
+h2 {
+    margin-left: 50px;
+    margin-right: 150px;
+    text-align: justify;
+    font-family: "Bebas Neue", sans-serif;
+    color: #191f2b;
+    font-style: normal;
+}
+
+p {
+    margin-left: 80px;
+    margin-right: 150px;
+    text-align: justify;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.mision,
+.vision,
+.historia {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}

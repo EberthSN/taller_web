@@ -22,7 +22,7 @@ h3 {
 /* estilos para la pagina web promociones */
 
  .promociones {
-    height: 44vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin-left: 250px;

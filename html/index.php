@@ -29,14 +29,8 @@
         <i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.tiktok.com/" target="_blank">
         <i class="fa-brands fa-tiktok"></i></a>
-        <?php if (isset($_SESSION['user'])): ?>
-                <a href="profile.php" target="_blank">
-                    <i class="fa-solid fa-user"></i></a>
-            <?php else: ?>
-                <a href="login1.php" target="_blank">
-                    <i class="fa-solid fa-user"></i></a>
-            <?php endif; ?>
-
+      <a href="login1.php" target="_blank">
+        <i class="fa-solid fa-user"></i></a>
       <a href="carrito.html" target="_blank">
         <i class="fa-solid fa-cart-shopping"></i></a>
     </ul>
