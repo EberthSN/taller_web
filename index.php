@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require_once "config/conexion.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BEKINS</title>
-  <link rel="stylesheet" href="../estilos/style.css">
-  <link rel="icon" href="../img/title.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="icon" href="img/title.jpg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/9da0902580.js" crossorigin="anonymous"></script>
@@ -31,7 +31,7 @@
         <i class="fa-brands fa-tiktok"></i></a>
       <a href="login1.php" target="_blank">
         <i class="fa-solid fa-user"></i></a>
-      <a href="carrito.html" target="_blank">
+      <a href="carrito.php" target="_blank">
         <i class="fa-solid fa-cart-shopping"></i></a>
     </ul>
   </nav>
@@ -52,13 +52,13 @@
             <a class="nav-link active" href="index.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.html">Productos</a>
+            <a class="nav-link" href="catalogo.php">Productos</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="acercade.html">Sobre nosotros</a>
+            <a class="nav-link" href="acercade.php">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ubicacion.html">Ubicación</a>
+            <a class="nav-link" href="ubicacion.php">Ubicación</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -78,13 +78,13 @@
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="3000">
-        <img src="../img/portada.jpg" class="d-block w-100" alt="...">
+        <img src="img/portada.jpg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item" data-bs-interval="3000">
-        <img src="../img/portada1.jpg" class="d-block w-100" alt="...">
+        <img src="img/portada1.jpg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item" data-bs-interval="3000">
-        <img src="../img/portada4.jpg" class="d-block w-100" alt="...">
+        <img src="img/portada4.jpg" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -99,20 +99,20 @@
 
   <div class="card-informativas">
     <div class="card" style="width: 18rem;">
-      <img src="../img/bekins3.jpg" class="card-img-top" alt="">
+      <img src="img/bekins3.jpg" class="card-img-top" alt="">
       <div class="card-body">
         <p class="card-text">Zapatillas para fútsal en acción <strong>PIVOT 2.0</strong></p>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
-      <img src="../img/bekins6.jpg" class="card-img-top" alt="">
+      <img src="img/bekins6.jpg" class="card-img-top" alt="">
       <div class="card-body">
         <p class="card-text">BEKINS presente en la <strong>Copa Libertadores de Futsal 2024</strong>
           Exitos siempre @sebastianob Tortuguitas Buenos Aires Argentina</p>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
-      <img src="../img/bekins7.jpg" class="card-img-top" alt="">
+      <img src="img/bekins7.jpg" class="card-img-top" alt="">
       <div class="card-body">
         <p class="card-text">Después de una buena campaña regresa al Perú a seguir haciendo historia @sebastianob
           <strong>Pivot 2.0 Agua Marina</strong> Estadio Lolo Fernández
@@ -120,14 +120,14 @@
       </div>
     </div>
     <div class="card" style="width: 18rem;">
-      <img src="../img/bekins8.jpg" class="card-img-top" alt="">
+      <img src="img/bekins8.jpg" class="card-img-top" alt="">
       <div class="card-body">
         <p class="card-text">Grandes momentos que nos regala la pelotita <strong>Modelo Pivot 2.0 rojo escarlata
             IC</strong> Mundialito- El Porvenir- La Victoria</p>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
-      <img src="../img/bekins9.jpg" class="card-img-top" alt="">
+      <img src="img/bekins9.jpg" class="card-img-top" alt="">
       <div class="card-body">
         <p class="card-text">Salió la combinación que todos esperábamos<strong> PIVOT 2.0 NEGRO CON NARANJA</strong>
           ¿Estás listo para repartir chocolate?</p>
@@ -140,9 +140,9 @@
 
     <ul class="ayuda-productos">
       <h5><strong>Ayuda</strong></h5>
-      <a href="centrodeayuda.html">Centro de ayuda</a>
-      <a href="opcionespago.html">Opciones de pago</a>
-      <a href="promociones.html">Promociones y Legales</a>
+      <a href="centrodeayuda.php">Centro de ayuda</a>
+      <a href="opcionespago.php">Opciones de pago</a>
+      <a href="promociones.php">Promociones y Legales</a>
       <a href="#">Cambios, devoluciones y garantías</a>
       <a href="#">Política de privacidad</a>
       <a href="#">Términos y condiciones</a>
@@ -161,9 +161,9 @@
     <ul class="paginas">
       <h5><Strong>Páginas del sistema</Strong></h5>
       <a href="index.php">Inicio</a>
-      <a href="productos.html">Productos</a>
-      <a href="acercade.html">Sobre nosotros</a>
-      <a href="ubicacion.html">Encuentranos en</a>
+      <a href="productos.php">Productos</a>
+      <a href="acercade.php">Sobre nosotros</a>
+      <a href="ubicacion.php">Encuentranos en</a>
       </a>
     </ul>
   </div>

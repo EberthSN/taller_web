@@ -1,3 +1,5 @@
+<?php require_once "../config/conexion.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +31,7 @@
     <a href="login1.php" target="_blank">
       <i class="fa-solid fa-user"></i></a>
 
-    <a href="carrito.html" target="_blank">
+    <a href="carrito.php" target="_blank">
       <i class="fa-solid fa-cart-shopping"></i></a>
   </ul>
 </nav>
@@ -50,13 +52,13 @@
           <a class="nav-link" href="index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="productos.html">Productos</a>
+          <a class="nav-link" href="productos.php">Productos</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="acercade.html">Sobre nosotros</a>
+          <a class="nav-link" href="acercade.php">Sobre nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="ubicacion.html">Ubicación</a>
+          <a class="nav-link active" href="ubicacion.php">Ubicación</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -77,9 +79,9 @@
 
   <ul class="ayuda-productos">
     <h5><strong>Ayuda</strong></h5>
-    <a href="centrodeayuda.html">Centro de ayuda</a>
-    <a href="opcionespago.html">Opciones de pago</a>
-    <a href="promociones.html">Promociones y Legales</a>
+    <a href="centrodeayuda.php">Centro de ayuda</a>
+    <a href="opcionespago.php">Opciones de pago</a>
+    <a href="promociones.php">Promociones y Legales</a>
     <a href="#">Cambios, devoluciones y garantías</a>
     <a href="#">Política de privacidad</a>
     <a href="#">Términos y condiciones</a>
@@ -97,10 +99,10 @@
 
   <ul class="paginas">
     <h5><Strong>Páginas del sistema</Strong></h5>
-    <a href="index.html">Inicio</a>
-    <a href="productos.html">Productos</a>
-    <a href="acercade.html">Sobre nosotros</a>
-    <a href="ubicacion.html">Encuentranos en</a>
+    <a href="index.php">Inicio</a>
+    <a href="productos.php">Productos</a>
+    <a href="acercade.php">Sobre nosotros</a>
+    <a href="ubicacion.php">Encuentranos en</a>
     </a>
   </ul>
 </div>

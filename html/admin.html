@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema MGA</title>
+    <link rel="stylesheet" href="../estilos/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js" defer></script>
+</head>
+<body>
+<aside class="aside">
+    <div class="top">
+        <a href="admin.html" class="top_logo">
+            <img src="../img/title.jpg" alt="">
+        </a>
+        <i class='closeIcon bx bx-x'></i>
+    </div>
+    <div class="sidebar">
+        <a href="admin.html"  class="active">
+            <i class='bx bxs-dashboard' ></i>
+            <p>Administrador</p>
+        </a>
+        <a href="listarProductos.html"  class="">
+            <i class='bx bx-cog'></i>
+            <p>Listar Productos</p>
+        </a>
+
+        <a href="listarProductos.html"  class="">
+            <i class='bx bx-cog'></i>
+            <p>Agregar Productos</p>
+        </a>
+
+        <a href="listarClientes.html">
+            <i class='bx bx-user' ></i>
+            <p>Listar clientes</p>
+        </a>
+       
+    </div>
+</aside>
+    
+    <div class="container">
+        
+        <main class="main">
+
+            <nav class="navbar">
+                
+                <div class="navbar_left">
+                    <a href="">
+                        <i class='bx bx-menu' ></i>
+                    </a>
+                    <h3>Dashboard</h3>
+                </div>
+                
+                <div class="navbar_right">
+                    <div class="theme-toggler">
+                        <span class="light-theme"><i class='bx bxs-sun' ></i></span>
+                        <span class="dark-theme"><i class='bx bxs-moon'></i></span>
+                    </div>
+
+                    <div href="#" class="perfil_user">
+                        <div class="perfil_icon">
+                            <p>U</p>
+                        </div>
+                        <p>Usuario</p>
+                        <div class="user_options">
+                            <a href="index.html">Cerrar Sesión</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <div class="dashboard">
+
+                <div class="left">
+
+                    <div class="insights">
+                        <a href="" class="incomes">
+                            <div class="content">
+                                <span class="incomes">
+                                    <i class='bx bx-trending-up' ></i>
+                                </span>
+                                <div class="info">
+                                    <h4>S/ ${TotalPresupuesto}</h4>
+                                    <p>Total Ingresos</p>
+                                </div>
+                            </div>
+                            <p class="porcent good">+5.10%</p>
+                        </a>
+    
+                        <a href="" class="clients">
+                            <div class="content">
+                                <span class="clients"><i class='bx bxs-user-detail' ></i></span>
+                                <div class="info">
+                                    <h4>${TotalClientes}</h4>
+                                    <p>Total Clientes</p>
+                                </div>
+                            </div>
+                            <p class="porcent bad">+5.10%</p>
+                        </a>
+                        <a href="" class="incomes">
+                            <div class="content">
+                                <span class="incomes">
+                                    <i class='bx bx-trending-up' ></i>
+                                </span>
+                                <div class="info">
+                                    <h4>${TotalProductos}</h4>
+                                    <p>Total Productos</p>
+                                </div>
+                            </div>
+                            <p class="porcent good">+1.10%</p>
+                        </a>
+                    </div>
+
+                </div>
+                
+
+                <div class="right">
+                    <div class="date">
+                        <p id="current-date"></p>
+                    </div>
+
+                    <div id="calendar" class="calendar"></div>
+                    
+                </div>
+
+
+            </div>
+
+        </main>
+    </div>
+
+<script src="../scripts/dark.js"></script>
+    <script src="../scripts/dropdown.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const calendar = new VanillaCalendar('#calendar', {
+            settings: {
+                visibility: {
+                theme: 'dark',
+                },
+            },
+          });
+          calendar.init();
+        });
+      </script>
+</body>
+</html>

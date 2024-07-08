@@ -1,3 +1,5 @@
+<?php require_once "../config/conexion.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BEKINS</title>
   <link rel="stylesheet" href="../estilos/style.css">
-  <link rel="stylesheet" href="../estilos/styleAce.css">
+  <link rel="stylesheet" href="../estilos/styleGenAyu.css">
   <link rel="icon" href="../img/title.jpg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/9da0902580.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/font/fonts.css">
 </head>
 
 <body>
@@ -30,9 +31,10 @@
         <i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.tiktok.com/" target="_blank">
         <i class="fa-brands fa-tiktok"></i></a>
+      <a href="login1.php" target="_blank">
+        <i class="fa-solid fa-user"></i></a>
 
-      <a href="login1.php"><i class="fa-solid fa-user"></i></a>
-      <a href="carrito.html" target="_blank">
+      <a href="carrito.php" target="_blank">
         <i class="fa-solid fa-cart-shopping"></i></a>
     </ul>
   </nav>
@@ -50,16 +52,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Inicio</a>
+            <a class="nav-link active" href="index.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.html">Productos</a>
+            <a class="nav-link" href="productos.php">Productos</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link active" href="acercade.html">Sobre nosotros</a>
+            <a class="nav-link" href="acercade.php">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ubicacion.html">Ubicación</a>
+            <a class="nav-link" href="ubicacion.php">Ubicación</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -70,39 +72,21 @@
     </div>
   </nav>
 
-  <div class="sobreBekins">
-    <h2 class="subtitulo-historia">Historia de la empresa</h2>
-    <p class="historia">
-      BEKINS es una empresa peruana fundada en 2015 por Alejandro Ramos, un apasionado del fútbol y emprendedor de
-      Lima. Inspirado por su amor al deporte y la falta de calzado deportivo de calidad a precios accesibles en el
-      mercado local, Alejandro decidió crear su propia línea de zapatillas de fútbol. Comenzando en un pequeño taller
-      en su barrio, BEKINS rápidamente se ganó la reputación por sus diseños innovadores y materiales duraderos. Con
-      el apoyo de la comunidad y un enfoque en la artesanía local, BEKINS creció, ampliando su producción y
-      distribución a nivel nacional. Hoy en día, BEKINS sigue siendo una empresa orgullosamente peruana que promueve
-      el deporte y apoya a los jóvenes talentos locales.
-    </p>
-    <h2 class="subtitulo-mision">Misión de la empresa</h2>
-    <p class="mision">
-      Nuestra misión en BEKINS es proporcionar zapatillas deportivas de alta calidad que combinan innovación,
-      comodidad y durabilidad a precios accesibles. Nos comprometemos a promover el deporte en Perú y a apoyar a los
-      jóvenes talentos locales, fomentando una comunidad activa y saludable.
-    </p>
-    <h2 class="subtitulo-vision">Visión de la empresa</h2>
-    <p class="vision">
-      Nuestra visión es ser la marca líder de calzado deportivo en Perú, reconocida por nuestra excelencia en diseño y
-      calidad, y nuestro compromiso con el desarrollo sostenible y el bienestar de nuestras comunidades. Buscamos
-      expandirnos a mercados internacionales, llevando el espíritu y la pasión del fútbol peruano al mundo.
-    </p>
+  <div class="promociones">
+    <p class="p-titulo"><strong>PROMOCIONES Y LEGALES</strong></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, fugit officiis minima eum debitis minus porro
+      aliquid doloribus a corporis quos magni assumenda aperiam. Tenetur quis cumque dignissimos autem vero.</p>
   </div>
+
 
   <!-- div para información complementaria de la empresa-->
   <div class="info-complementaria">
 
     <ul class="ayuda-productos">
       <h5><strong>Ayuda</strong></h5>
-      <a href="centrodeayuda.html">Centro de ayuda</a>
-      <a href="opcionespago.html">Opciones de pago</a>
-      <a href="promociones.html">Promociones y Legales</a>
+      <a href="centrodeayuda.php">Centro de ayuda</a>
+      <a href="opcionespago.php">Opciones de pago</a>
+      <a href="promociones.php">Promociones y Legales</a>
       <a href="#">Cambios, devoluciones y garantías</a>
       <a href="#">Política de privacidad</a>
       <a href="#">Términos y condiciones</a>
@@ -120,10 +104,10 @@
 
     <ul class="paginas">
       <h5><Strong>Páginas del sistema</Strong></h5>
-      <a href="index.html">Inicio</a>
-      <a href="productos.html">Productos</a>
-      <a href="acercade.html">Sobre nosotros</a>
-      <a href="ubicacion.html">Encuentranos en</a>
+      <a href="index.php">Inicio</a>
+      <a href="productos.php">Productos</a>
+      <a href="acercade.php">Sobre nosotros</a>
+      <a href="ubicacion.php">Encuentranos en</a>
       </a>
     </ul>
   </div>
