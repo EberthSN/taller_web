@@ -7,13 +7,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BEKINS</title>
-  <link rel="stylesheet" href="../estilos/style.css">
-  <link rel="icon" href="../img/title.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="icon" href="img/title.jpg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/9da0902580.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../estilos/stylePro.css">
-  <link rel="stylesheet" href="../estilos/login.css">
+  <link rel="stylesheet" href="estilos/stylePro.css">
+  <link rel="stylesheet" href="estilos/login.css">
 </head>
 
 <body>
@@ -147,7 +147,7 @@
     <p class="footer-final">© 2024 Bekins, Puente Piedra, Perú - Tienda de artículos deportivos</p>
   </footer>
 
-  <script src="../scripts/scriptLogin.js"></script>
+  <script src="scripts/scriptLogin.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXlYp8/3gfhpuvR0bb0DWRKt5tD7z4VaCzU7XW2cpmNH4p6yfFZUAMBR74h3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
