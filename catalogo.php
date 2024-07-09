@@ -9,11 +9,11 @@
     <meta name="author" content="" />
     <title>BEKINS</title>
     <!-- Favicon-->
-    <link rel="icon" href="img/title.jpg" type="image/x-icon">
     <!-- Bootstrap icons-->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" /> -->
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="icon" href="assets/img/title.jpg" type="image/x-icon">
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link href="assets/css/estilos.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -66,10 +66,10 @@
             <a class="nav-link active" href="catalogo.php">Productos</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="acercade.php">Sobre nosotros</a>
+            <a class="nav-link" href="html/acercade.html">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ubicacion.php">Ubicación</a>
+            <a class="nav-link" href="html/ubicacion.html">Ubicación</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -153,9 +153,9 @@
 
 <ul class="ayuda-productos">
   <h5><strong>Ayuda</strong></h5>
-  <a href="centrodeayuda.php">Centro de ayuda</a>
-  <a href="opcionespago.php">Opciones de pago</a>
-  <a href="promociones.php">Promociones y Legales</a>
+  <a href="html/centrodeayuda.html">Centro de ayuda</a>
+  <a href="html/opcionespago.html">Opciones de pago</a>
+  <a href="html/promociones.html">Promociones y Legales</a>
   <a href="#">Cambios, devoluciones y garantías</a>
   <a href="#">Política de privacidad</a>
   <a href="#">Términos y condiciones</a>
@@ -175,8 +175,8 @@
   <h5><Strong>Páginas del sistema</Strong></h5>
   <a href="index.php">Inicio</a>
   <a href="catalogo.php">Productos</a>
-  <a href="acercade.php">Sobre nosotros</a>
-  <a href="ubicacion.php">Encuentranos en</a>
+  <a href="html/acercade.html">Sobre nosotros</a>
+  <a href="html/ubicacion.html">Encuentranos en</a>
   </a>
 </ul>
 </div>
@@ -185,7 +185,6 @@
 <p class="footer-final">© 2024 bekins, Puente piedra, Perú - Tienda de artículos deportivos</p>
 </footer>
 
-<script src="../scripts/main.js"></script>
 </body>
 
 </html>

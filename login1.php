@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BEKINS</title>
   <link rel="stylesheet" href="estilos/style.css">
-  <link rel="icon" href="img/title.jpg" type="image/x-icon">
+  <link rel="icon" href="assets/img/title.jpg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/9da0902580.js" crossorigin="anonymous"></script>
@@ -56,13 +56,13 @@
             <a class="nav-link active" href="index.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.php">Productos</a>
+            <a class="nav-link" href="catalogo.php">Productos</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="acercade.php">Sobre nosotros</a>
+            <a class="nav-link" href="html/acercade.html">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ubicacion.php">Ubicación</a>
+            <a class="nav-link" href="html/ubicacion.html">Ubicación</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -90,14 +90,14 @@
       </div>
 
       <div class="contenedor__login-register">
-        <form action="login.php" class="formulario__login" method="post">
+        <form action="" class="formulario__login" method="post">
           <h2>Iniciar sesión</h2>
           <input type="email" minlength="11" placeholder="Correo: ejemplo@gmail.com" name="Iemail" required>
           <input type="password" placeholder="Contraseña: ejemplo123" name="Icontra" required>
           <button>Ingresar</button>
         </form>
 
-        <form action="../php/registroUsuario.php" class="formulario__register" method="post">
+        <form action="" class="formulario__register" method="post">
           <h2>Registrarse</h2>
           <input type="text" minlength="3" placeholder="Nombre: Pedro" name="Rnombre" required>
           <input type="text" minlength="3" placeholder="Apellidos: Picapiedra" name="Rapellido" required>
@@ -117,9 +117,9 @@
   <div class="info-complementaria">
     <ul class="ayuda-productos">
       <h5><strong>Ayuda</strong></h5>
-      <a href="centrodeayuda.php">Centro de ayuda</a>
-      <a href="opcionespago.php">Opciones de pago</a>
-      <a href="promociones.php">Promociones y Legales</a>
+      <a href="html/centrodeayuda.html">Centro de ayuda</a>
+      <a href="html/opcionespago.html">Opciones de pago</a>
+      <a href="html/promociones.html">Promociones y Legales</a>
       <a href="#">Cambios, devoluciones y garantías</a>
       <a href="#">Política de privacidad</a>
       <a href="#">Términos y condiciones</a>
@@ -137,9 +137,9 @@
     <ul class="paginas">
       <h5><strong>Páginas del sistema</strong></h5>
       <a href="index.php">Inicio</a>
-      <a href="productos.php">Productos</a>
-      <a href="acercade.php">Sobre nosotros</a>
-      <a href="ubicacion.php">Encuéntranos en</a>
+      <a href="catalogo.php">Productos</a>
+      <a href="html/acercade.html">Sobre nosotros</a>
+      <a href="html/ubicacion.html">Encuéntranos en</a>
     </ul>
   </div>
 

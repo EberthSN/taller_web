@@ -1,4 +1,5 @@
 <?php require_once "config/conexion.php";
+require_once "config/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -6,11 +7,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
     <title>Carrito de Compras</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="img/title.jpg" />
+    <link rel="icon" type="image/x-icon" href="assets/img/title.jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/style.css">
@@ -64,10 +63,10 @@
             <a class="nav-link active" href="catalogo.php">Productos</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="acercade.php">Sobre nosotros</a>
+            <a class="nav-link" href="html/acercade.html">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ubicacion.php">Ubicación</a>
+            <a class="nav-link" href="html/ubicacion.html">Ubicación</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -81,8 +80,8 @@
     <header class="bg-dark py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Carrito</h1>
-                <p class="lead fw-normal text-white-50 mb-0">Tus Productos Agregados.</p>
+                <h1 class="display-4 fw-bolder">Carrito de compras</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Lista de productos agregados</p>
             </div>
         </div>
     </header>
@@ -128,9 +127,9 @@
 
 <ul class="ayuda-productos">
   <h5><strong>Ayuda</strong></h5>
-  <a href="centrodeayuda.php">Centro de ayuda</a>
-  <a href="opcionespago.php">Opciones de pago</a>
-  <a href="promociones.php">Promociones y Legales</a>
+  <a href="html/centrodeayuda.html">Centro de ayuda</a>
+  <a href="html/opcionespago.html">Opciones de pago</a>
+  <a href="html/promociones.html">Promociones y Legales</a>
   <a href="#">Cambios, devoluciones y garantías</a>
   <a href="#">Política de privacidad</a>
   <a href="#">Términos y condiciones</a>
@@ -150,8 +149,8 @@
   <h5><Strong>Páginas del sistema</Strong></h5>
   <a href="index.php">Inicio</a>
   <a href="catalogo.php">Productos</a>
-  <a href="acercade.php">Sobre nosotros</a>
-  <a href="ubicacion.php">Encuentranos en</a>
+  <a href="html/acercade.html">Sobre nosotros</a>
+  <a href="html/ubicacion.html">Encuentranos en</a>
   </a>
 </ul>
 </div>
@@ -160,7 +159,6 @@
 <p class="footer-final">© 2024 bekins, Puente piedra, Perú - Tienda de artículos deportivos</p>
 </footer>
 
-<script src="../scripts/main.js"></script>
 </body>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
