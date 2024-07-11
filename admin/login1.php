@@ -1,5 +1,42 @@
-<?php require_once "config/conexion.php"; ?>
+<?php
+session_start();
 
+
+    if (!empty($_POST)) {
+        $alert = '';
+        if (empty($_POST['usuario']) || empty($_POST['clave'])) {
+            $alert = '<div class="alert alert-danger text-center alert-dismissible fade show" role="alert">
+                        Ingrese usuario y contraseña
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>';
+        } else {
+            require_once "../config/conexion.php";
+            $user = mysqli_real_escape_string($conexion, $_POST['usuario']);
+            $clave = md5(mysqli_real_escape_string($conexion, $_POST['clave']));
+            $query = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$user' AND clave = '$clave'");
+            mysqli_close($conexion);
+            $resultado = mysqli_num_rows($query);
+            if ($resultado > 0) {
+                $dato = mysqli_fetch_array($query);
+                $_SESSION['active'] = true;
+                $_SESSION['id'] = $dato['id'];
+                $_SESSION['nombre'] = $dato['nombre'];
+                $_SESSION['user'] = $dato['usuario'];
+                header('Location: productos.php');
+            } else {
+                $alert = '<div class="alert alert-danger text-center alert-dismissible fade show" role="alert">
+                        Contraseña incorrecta
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>';
+                session_destroy();
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,13 +44,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BEKINS</title>
-  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="../estilos/style.css">
   <link rel="icon" href="assets/img/title.jpg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/9da0902580.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="estilos/stylePro.css">
-  <link rel="stylesheet" href="estilos/login.css">
+  <link rel="stylesheet" href="../estilos/stylePro.css">
+  <link rel="stylesheet" href="../estilos/login.css">
 </head>
 
 <body>
@@ -35,7 +72,7 @@
       <a href="login1.php">
         <i class="fa-solid fa-user"></i></a>
 
-      <a href="carrito.php">
+      <a href="../carrito.php">
         <i class="fa-solid fa-cart-shopping"></i></a>
     </ul>
   </nav>
@@ -43,7 +80,7 @@
   <!-- Menú pricipal -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="../index.php">
         <h1 class="nombreEmpresa">BEKINS</h1>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -53,16 +90,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Inicio</a>
+            <a class="nav-link active" href="../index.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="catalogo.php">Productos</a>
+            <a class="nav-link" href="../catalogo.php">Productos</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="html/acercade.html">Sobre nosotros</a>
+            <a class="nav-link" href="../html/acercade.html">Sobre nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="html/ubicacion.html">Ubicación</a>
+            <a class="nav-link" href="../html/ubicacion.html">Ubicación</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -90,10 +127,10 @@
       </div>
 
       <div class="contenedor__login-register">
-        <form action="" class="formulario__login" method="post">
+        <form action="" class="formulario__login" method="POST">
           <h2>Iniciar sesión</h2>
-          <input type="email" minlength="11" placeholder="Correo: ejemplo@gmail.com" name="Iemail" required>
-          <input type="password" placeholder="Contraseña: ejemplo123" name="Icontra" required>
+          <input type="text" placeholder="Usuario: bekins" id="usuario" name="usuario" autocomplete="off" required>
+          <input type="password" placeholder="Contraseña: ejemplo123" id="clave" name="clave" required>
           <button>Ingresar</button>
         </form>
 
@@ -101,9 +138,11 @@
           <h2>Registrarse</h2>
           <input type="text" minlength="3" placeholder="Nombre: Pedro" name="Rnombre" required>
           <input type="text" minlength="3" placeholder="Apellidos: Picapiedra" name="Rapellido" required>
-          <input type="number" pattern="\d{8}" minlength="8" maxlength="8" placeholder="Número de DNI: 12345678" name="Rdni" required>
+          <input type="number" pattern="\d{8}" minlength="8" maxlength="8" placeholder="Número de DNI: 12345678"
+            name="Rdni" required>
           <input type="email" minlength="11" placeholder="Correo: ejemplo@gmail.com" name="Remail" required>
-          <input type="number" pattern="\d{9}" maxlength="9" minlength="9" placeholder="Número de celular: 908070605" name="Rtelefono" required>
+          <input type="number" pattern="\d{9}" maxlength="9" minlength="9" placeholder="Número de celular: 908070605"
+            name="Rtelefono" required>
           <input type="text" minlength="8" placeholder="Dirección: Av. ejemplo 1588" name="Rdireccion" required>
           <input type="password" minlength="5" placeholder="Contraseña: example123" name="Rcontra">
           <input type="text" minlength="5" placeholder="Usuario: PedroPi" name="RidUsuario" require>
@@ -147,11 +186,18 @@
     <p class="footer-final">© 2024 Bekins, Puente Piedra, Perú - Tienda de artículos deportivos</p>
   </footer>
 
-  <script src="scripts/scriptLogin.js"></script>
+  <script src="../scripts/scriptLogin.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXlYp8/3gfhpuvR0bb0DWRKt5tD7z4VaCzU7XW2cpmNH4p6yfFZUAMBR74h3" crossorigin="anonymous"></script>
+    integrity="sha384-IQsoLXlYp8/3gfhpuvR0bb0DWRKt5tD7z4VaCzU7XW2cpmNH4p6yfFZUAMBR74h3"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhG+YujL2+N8vZlAZ9M1B7/9A8ROs2XURyBlV5PEK8IgKNkP2th7/tvAX0p" crossorigin="anonymous"></script>
+
+  <!-- Script para iniciar sesión -->
+  <script src="../scripts/login.js"></script>
+
+  <!-- Script para ventana modal-->
+  <script src="../scripts/modal.js"></script>
 </body>
 
 </html>

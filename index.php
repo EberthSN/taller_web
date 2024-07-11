@@ -29,9 +29,9 @@
         <i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.tiktok.com/" target="_blank">
         <i class="fa-brands fa-tiktok"></i></a>
-      <a href="login1.php" target="_blank">
+      <a href="admin/login1.php">
         <i class="fa-solid fa-user"></i></a>
-      <a href="carrito.php" target="_blank">
+      <a href="carrito.php">
         <i class="fa-solid fa-cart-shopping"></i></a>
     </ul>
   </nav>
