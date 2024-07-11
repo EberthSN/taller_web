@@ -38,7 +38,7 @@ include("includes/header.php"); ?>
                         <th>Nombre</th>
                         <th>Descripción</th>
                         <th>Precio Normal</th>
-                        <th>Precio Rebajado</th>
+                        <th>Precio en oferta</th>
                         <th>Cantidad</th>
                         <th>Categoria</th>
                         <th></th>
@@ -61,6 +61,12 @@ include("includes/header.php"); ?>
                                     <button class="btn btn-danger" type="submit">Eliminar</button>
                                 </form>
                             </td>
+                            <td>
+                <form method="get" action="editar_producto.php" class="d-inline">
+                    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                    <button class="btn btn-warning" type="submit">Editar</button>
+                </form>
+            </td>
                         </tr>
                     <?php } ?>
                 </tbody>

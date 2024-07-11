@@ -22,13 +22,13 @@ include("includes/header.php");
                 <thead class="thead-dark">
                     <tr>
                         <th>Id</th>
-                        <th>Nombre</th>
+                        <th>Nombre de categoría</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $query = mysqli_query($conexion, "SELECT * FROM categorias ORDER BY id DESC");
+                    $query = mysqli_query($conexion, "SELECT * FROM categorias ORDER BY id ASC");
                     while ($data = mysqli_fetch_assoc($query)) { ?>
                         <tr>
                             <td><?php echo $data['id']; ?></td>
@@ -38,6 +38,12 @@ include("includes/header.php");
                                     <button class="btn btn-danger" type="submit">Eliminar</button>
                                 </form>
                             </td>
+                            <td>
+                <form method="get" action="editar.php" class="d-inline">
+                    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                    <button class="btn btn-warning" type="submit">Editar</button>
+                </form>
+            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
